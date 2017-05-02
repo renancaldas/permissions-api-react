@@ -5,7 +5,8 @@ Permissions Api - Renan Caldas
 1. Folder structure
 2. Running the application
 3. The back-end config file
-4. API methods documentation
+4. Scaling proposal document
+5. API methods documentation
 
 ### 1. Folder structure
 ---
@@ -42,7 +43,12 @@ There is a config file inside the `config` folder, called `development.json`. Th
 - Server port (`3000` by default)
 - Database connection string ([mlab](https://mlab.com/) mongo database)
 
-### 4. API methods documentation
+### 4. Scaling proposal document
+---
+
+There is a file called **"scaling.txt"** which describes some actions to scale out the application.
+
+### 5. API methods documentation
 ---
 The base url for the server running the `development.json` config file should be: `http://localhost:3000`
 
