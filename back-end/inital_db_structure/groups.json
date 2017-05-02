@@ -1,0 +1,10 @@
+{
+    "_id" : ObjectId("58af3789079f33252df0e614"),
+    "name" : "administrators",
+    "users" : [
+
+    ]
+    "permissions" : [
+
+    ]
+}

@@ -1,0 +1,31 @@
+Scaling proposal document
+
+For scaling the API application I would (using AWS):
+
+1. Create an EC2 linux instance.
+2. Take a snapshot with the initial structure: Docker, NodeJS, the application and a Git hook listener (for continuous deployment).
+3. Create a message queue with Amazon Simple Queue Service, in order to control the concurrency between servers.
+4. Update the application in order to work with the MQ.
+5. Configure an AWS Elastic Load Balancing with auto scaling group to create new servers on demand (with the server snapshot image).
+6. Use the Amazon's Route 53 to point the domain to the load balancer's IP / DNS.
+
+For testing and checking with parts to optimize:
+- I would use PM2 module in order to track the application API calls and errors thrown.
+- If the application is taking much time on getting data from the DB, I would use a memory cache db, like redis.
+
+Architecture:
+- I would use completely separated environments for staging and production.
+- Only the production environment would have the auto scaling group for scaling out the solution across N servers.
+- Depending on the user's location, I would consider "Latency Based Routing". For example, if the majority of users are in Asia, route their
+requests to a closer server. Amazon's Route 53 have this option.
+- The AWS Elastic Load Balancing checks automatically when a server is running in a high load and creates a more servers in order to
+reduce the load between the servers. A manual solution could be using NGINX, but I haven't used it in order to create new servers on demand.
+
+In my Github:
+- There is a project that I have done during a hackathon last year and I and built a small solution that uses 2 local servers (my own computer and a Raspberry Pi).
+I made a video explaining the solution: https://github.com/renancaldas/hootsuite-webhook
+
+- I have made a simple solution to listen for webhooks and automatically do a "git pull" in order to deploy applications across N servers:
+https://github.com/renancaldas/git-hook-listener
+
+- I did a step-by-step guide for setting up an AWS EC2 server: https://github.com/renancaldas/aws-ec2-guide

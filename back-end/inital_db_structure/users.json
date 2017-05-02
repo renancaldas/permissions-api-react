@@ -1,0 +1,21 @@
+{
+    "_id" : ObjectId("58af375d079f33252df0e612"),
+    "name" : "Bob",
+    "permissions" : [
+
+    ]
+}
+{
+    "_id" : ObjectId("58af379b079f33252df0e615"),
+    "name" : "Dan",
+    "permissions" : [
+
+    ]
+}
+{
+    "_id" : ObjectId("58af3770079f33252df0e613"),
+    "name" : "Alice",
+    "permissions" : [
+
+    ]
+}

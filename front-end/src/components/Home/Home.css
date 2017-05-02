@@ -1,0 +1,14 @@
+.row-space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.width-50 {
+  width: 50%;
+  border: 1px solid lightgrey;
+}
+
+.center {
+  text-align: center;
+}

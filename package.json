@@ -1,0 +1,28 @@
+{
+  "name": "permissions-api-renan",
+  "author": "",
+  "version": "1.0.0",
+  "description": "Loader for back-end and front-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd back-end && npm test",
+    "install-back": "cd back-end && npm install",
+    "install-front": "cd front-end && npm install",
+    "postinstall": "npm-run-all --parallel install-back install-front",
+    "start-back": "cd back-end && npm start",
+    "start-front": "cd front-end && npm start",
+    "start": "npm-run-all --parallel start-back start-front"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renancaldas/permissions-api-react.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renancaldas/permissions-api-react/issues"
+  },
+  "homepage": "https://github.com/renancaldas/permissions-api-react#readme",
+  "dependencies": {
+    "npm-run-all": "^4.0.2"
+  }
+}

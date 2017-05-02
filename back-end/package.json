@@ -1,0 +1,29 @@
+{
+  "name": "permissionsApiRenan",
+  "version": "1.0.0",
+  "description": "PermissionsApi - Renan Caldas",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --timeout 10000",
+    "start": "NODE_ENV=development DEBUG=permissionsApiRenan* node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "config": "^1.21.0",
+    "debug": "^2.2.0",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.1.9",
+    "lodash": "^4.16.6",
+    "moment": "^2.15.1",
+    "mongoose": "^4.6.5",
+    "q": "^1.4.1",
+    "request": "^2.79.0"
+  },
+  "author": "Renan Caldas <renan.caldas@whiteprompt.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "request-promise": "^4.1.1"
+  }
+}
