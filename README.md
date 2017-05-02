@@ -1,5 +1,6 @@
-# Permissions Api
-Permissions Api - Renan Caldas
+# Permissions Api (Code Challenge)
+
+See the "challenge.txt" file for more information.
 
 ### Summary
 1. Folder structure
